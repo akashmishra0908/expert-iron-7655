@@ -1,0 +1,117 @@
+.main-signup {
+    display: flex;
+    width: 100%;
+    border:1px solid black;
+    background-color: rgb(229, 229, 229);
+    height: auto;
+}
+
+.main-signup>div:nth-child(1){
+    border-right: 2px solid black;
+}
+.main-signup>div{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 50%;
+    height: auto;
+    display: flex;
+     flex-direction: column;
+}
+
+#signIn {
+    margin: auto;
+    width: 30%;
+    margin-left: 200px;
+}
+
+#logIn {
+    margin: auto;
+    display: none;
+}
+
+input {
+    width: 150%;
+    text-align: center;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+button {
+    margin-left: 40px;
+    width: 100%;
+    height: 35px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgb(115, 115, 253);
+}
+button:hover{
+    cursor: pointer;
+}
+
+#already {
+    font-size: larger;
+}
+p{
+    text-align: center;
+}
+#already:hover{
+    cursor: pointer;
+}
+img{
+    width: 90%;
+    margin-top: 40px;
+    border-radius:10%;
+    margin-left: 30px;
+    border:1px solid black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    justify-content: center;
+}
+@media all and (min-width:400px) and (max-width:900px) {
+    .main-signup{
+display: flex;
+flex-direction: column;
+    }
+    .main-signup>div:nth-child(1){
+        border-right: 0px;
+    }
+    .main-signup>div{
+        width: 100%;
+    }
+    #signIn{
+        margin: auto;
+        width: 50%;
+        margin-left: 100px;
+    }
+    #logIn{
+        margin: auto;
+        width: 50%;
+        margin-left: 100px;   
+    }
+}
+@media all and (min-width:100px) and (max-width:399px) {
+    .main-signup{
+display: flex;
+flex-direction: column;
+    }
+    .main-signup>div:nth-child(1){
+        border-right: 0px;
+    }
+    .main-signup>div{
+        width: 100%;
+    }
+    input {
+        width: 200%;
+       }
+    #signIn{
+        margin: auto;
+        width: 30%;
+        margin-left: 100px;
+    }
+    #logIn{
+        margin: auto;
+        width: 30%;
+        margin-left: 100px;   
+    }
+   
+}
