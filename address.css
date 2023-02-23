@@ -1,0 +1,22 @@
+/* body{
+    background: lightgray;
+} */
+div{
+    background: lightcyan;
+}
+
+
+a{
+    text-decoration: none;
+}
+input,select{
+    height: 45.8px;
+    border: 2px solid#cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family:'Open Sans', sans-serif;
+}
+
+#mailme,#textme,#save{
+    height: 15px;
+}
