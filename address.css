@@ -2,7 +2,7 @@
     background: lightgray;
 } */
 div{
-    background: lightcyan;
+    background: #f0f0f0;
 }
 
 
@@ -14,7 +14,8 @@ input,select{
     border: 2px solid#cccccc;
     border-radius: 5px;
     font-size: 16px;
-    font-family:'Open Sans', sans-serif;
+    font-family:'Century Gothic', sans-serif;
+    color: black;
 }
 
 #mailme,#textme,#save{
