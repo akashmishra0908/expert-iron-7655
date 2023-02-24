@@ -79,7 +79,7 @@ body {
 	height: 56px;
 	display: flex;
 	align-items: center;
-	color: var(--blue);
+	color: #545454;
 	position: sticky;
 	top: 0;
 	left: 0;
@@ -324,7 +324,7 @@ body {
 	left: 2px;
 	bottom: 2px;
 	width: calc(25px - 4px);
-	background: var(--blue);
+	background: #545454;
 	border-radius: 50%;
 	transition: all .3s ease;
 }
@@ -591,3 +591,25 @@ body {
 		min-width: 420px;
 	}
 }
+.text{
+ color: #545454;
+}
+
+.card__img{
+    max-width: 70%;
+	margin-top: 2%;
+}
+.card-list{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.card{
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+}
+/* y */
