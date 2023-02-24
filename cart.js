@@ -1,4 +1,7 @@
 let Cart =JSON.parse(localStorage.getItem("cart"))||[]
+let buy=document.querySelector(".buy")
+
+let emptyCart=document.querySelector("h3")
 let Container=document.getElementById("cart-container")
 let flex_container=document.getElementById("flex_container")
 let total =document.getElementById("cart-total")
@@ -14,6 +17,7 @@ function displaydata(){
     let quantity = document.createElement("span");
     let price = document.createElement("h4");
     let Remove = document.createElement("button");
+    Remove.setAttribute("id","remove")
     let Increment = document.createElement("button");
     let Decrement = document.createElement("button");
    
@@ -55,5 +59,14 @@ function displaydata(){
   }
 total.textContent=sum
 }
-displaydata()
+if(Cart.length>0){
+  displaydata()
+}
+else{
+  emptyCart.innerText=`Cart is empty SHOP NOW!` 
+ buy.innerText=""
+ buy.style.backgroundColor="white"
+ buy.style
+}
+
 
