@@ -1,8 +1,109 @@
+* {
+    margin-top: 0px;
+    font-family: Century Gothic, sans-serif;
+}
+
+.nav {
+    height: auto;
+    /* position: sticky;
+    top: 0; */
+}
+
+.nav>div:nth-child(1) {
+    background-color: #545454;
+    height: 35px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.nav>div:nth-child(2) {
+    background-color: #f0f0f0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+
+.nav>div:nth-child(2)>div {
+    width: 25%;
+    height: auto;
+
+}
+
+.nav>div:nth-child(2)>div:nth-child(2) img {
+    width: 20%;
+    margin-left: 280px;
+    padding-top: 5px;
+}
+
+.nav>div:nth-child(2)>div:nth-child(4) {
+    display: flex;
+    justify-content: space-evenly
+}
+
+.icon {
+    /* width: 100%; */
+    margin-left: 10px;
+    font-size: 30px;
+    color:black;
+    margin-top: 20px;
+}
+
+.icon:hover {
+
+    color: rgb(129, 111, 5);
+    cursor: pointer;
+}
+
+.nav>div:nth-child(3) {
+    background-color: #ffffff;
+    height: auto;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-bottom: 1px solid black;
+}
+
+.nav>div:nth-child(3) div {
+    height: auto;
+}
+
+.nav>div:nth-child(3) div a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+
+.nav>div:nth-child(3) div a:hover {
+    color: rgb(203, 174, 9);
+}
+
+.nav>div:nth-child(3)>div:nth-child(1) {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav>div:nth-child(3)>div:nth-child(2) {
+    width: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.spantag {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 6px;
+}
 .main-signup {
+    margin-top: 10px;
     display: flex;
     width: 100%;
-    border:1px solid black;
-    background-color: rgb(229, 229, 229);
+    background-color: #f0f0f0;
     height: auto;
 }
 
@@ -58,7 +159,7 @@ p{
 #already:hover{
     cursor: pointer;
 }
-img{
+.main-signup img{
     width: 90%;
     margin-top: 40px;
     border-radius:10%;
@@ -88,6 +189,26 @@ flex-direction: column;
         width: 50%;
         margin-left: 100px;   
     }
+    
+    .nav>div:nth-child(2) {
+        width: 100%;
+    }
+    .nav>div:nth-child(2)>div:nth-child(2) img {
+        width: 35%;
+        margin-left: 100px;
+        padding-top: 2px;
+    }
+    .nav>div:nth-child(3)>div:nth-child(1) {
+        
+        display: flex;
+       flex-direction: column;
+    }
+    
+    .nav>div:nth-child(3)>div:nth-child(2) {
+     
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media all and (min-width:100px) and (max-width:399px) {
     .main-signup{
@@ -113,5 +234,28 @@ flex-direction: column;
         width: 30%;
         margin-left: 100px;   
     }
-   
+    .nav>div:nth-child(2){
+        width: 100%;
+    }
+    .nav>div:nth-child(2)>div:nth-child(2) img {
+        width: 50%;
+        margin-left: 40px;
+        padding-top: 2px;
+    }
+    .icon {
+        /* width: 100%; */
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    .nav>div:nth-child(3)>div:nth-child(1) {
+        
+        display: flex;
+       flex-direction: column;
+    }
+    
+    .nav>div:nth-child(3)>div:nth-child(2) {
+     
+        display: flex;
+        flex-direction: column;
+    }
 }
