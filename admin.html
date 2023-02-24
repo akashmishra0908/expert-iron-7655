@@ -19,32 +19,20 @@
 	<!-- SIDEBAR -->
 	<section id="sidebar">
 		<a href="#" class="brand">
-			<i class='bx bxs-smile'></i>
+			<i   class='bx bxs-smile'></i>
 			<span class="text">AdminHub</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
-				<a href="#">
+				<a href="./admin.html">
 					<i class='bx bxs-dashboard'></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li>
+			<li id="mystore">
 				<a href="#">
 					<i class='bx bxs-shopping-bag-alt'></i>
 					<span class="text">My Store</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-doughnut-chart'></i>
-					<span class="text">Analytics</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-message-dots'></i>
-					<span class="text">Message</span>
 				</a>
 			</li>
 			<li>
@@ -62,7 +50,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="index.html" class="logout">
+				<a href="home.html" class="logout">
 					<i class='bx bxs-log-out-circle'></i>
 					<span class="text">Logout</span>
 				</a>
@@ -82,7 +70,7 @@
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+					<button style="background-color: #545454;" type="submit" class="search-btn"><i class='bx bx-search'></i></button>
 				</div>
 			</form>
 			<input type="checkbox" id="switch-mode" hidden>
@@ -91,26 +79,18 @@
 				<i class='bx bxs-bell'></i>
 				<span class="num">8</span>
 			</a>
-			<a href="#" class="profile">
-				<img src="" alt="hi">
+			<a href="/home.html" class="profile">
+				<img src="/img.png/Global Bazaar (1).png" alt="hi">
 			</a>
 		</nav>
 		<!-- NAVBAR -->
 
 		<!-- MAIN -->
 		<main id="mainsection">
+
 			<div class="head-title">
 				<div class="left">
 					<h1>Dashboard</h1>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Dashboard</a>
-						</li>
-						<li><i class='bx bx-chevron-right'></i></li>
-						<li>
-							<a class="active" href="#">Home</a>
-						</li>
-					</ul>
 				</div>
 			</div>
 
@@ -149,18 +129,22 @@
 					<table>
 						<thead>
 							<tr>
-								<th>User</th>
-								<th>Mobile No.</th>
+								<th>Name</th>
+								<th>Email</th>
 								<th>Password</th>
-								<th>Status</th>
+								<!-- <th>Status</th> -->
 							</tr>
 						</thead>
 						<tbody id="userinput">
-
+							
+							
 						</tbody>
 					</table>
 				</div>
+			</div>
 
+		</main>
+         <!-- MAIN -->
 	</section>
 
 
