@@ -1,3 +1,11 @@
+let CartArr=JSON.parse(localStorage.getItem("cart"))||[]
+
+let Container=document.getElementById("product-container")
+
+let sup=document.getElementById("super")
+
+console.log(CartArr)
+
 async function FetchData(){
     try{
       let res=await fetch("https://gbp-temp-api.onrender.com/product?_limit=16&_page=1")
@@ -8,38 +16,41 @@ async function FetchData(){
       console.log(err)
     }
 }
-FetchData()
 
-let CartArr=JSON.parse(localStorage.getItem("cart"))||[]
-let Container=document.getElementById("product-container")
-let sup=document.getElementById("super")
+
 
 
 // sorting started here
 
-// let sortBtn=document.getElementById("filter")
+let sortBtn=document.getElementById("filter")
 // let sort_high=document.getElementById("high_to_low")
 // let sort_low=document.getElementById("low_to_high")
 
-// sort_high.addEventListener("change",async()=>{
+sortBtn.addEventListener("change",async()=>{
 
 
-//     try{
-//       let res=await fetch("https://gbp-temp-api.onrender.com/product?_sort=price&_order=asc")
-//            res=await res.json()
-//           console.log(res)
-//           DisplayProduct(res)
-//           // FetchData(res)
-//     }
-//     catch(err){
-//       console.log(err)
-//     }
+    try{
+      if(sortBtn.value=="High TO LOW"){ 
+          let res=await fetch("https://gbp-temp-api.onrender.com/product?_sort=price&_order=desc")
+           res=await res.json()
+          console.log(res)
+          DisplayProduct(res)
+        }
+   else{     let res=await fetch("https://gbp-temp-api.onrender.com/product?_sort=price&_order=asc")
+   res=await res.json()
+  console.log(res)
+  DisplayProduct(res)}
+          // FetchData(res)
+    }
+    catch(err){
+      console.log(err)
+    }
 
-// console.log(sortedData)
-  // DisplayProduct(sortedData)
+console.log(sortedData)
+  DisplayProduct(sortedData)
   
 
-// })
+})
 
 
 // sorting ended
@@ -49,7 +60,7 @@ let sup=document.getElementById("super")
 
 // function to display products
 function DisplayProduct(data){
- 
+
   Container.innerHTML=""
     data.forEach((product)=>{
         let card=document.createElement("div")
@@ -64,6 +75,8 @@ function DisplayProduct(data){
           category.textContent=product.catogory;
           price.textContent=`₹${product.price}`;
           title.textContent=product.title
+          sup.innerText=CartArr.length
+
         add_to_cart.addEventListener("click",()=>{
             if(checkDuplicate(product)){
               alert("Product Already in Cart")
@@ -73,7 +86,8 @@ function DisplayProduct(data){
               CartArr.push({...product,quantity:1})
               localStorage.setItem("cart",JSON.stringify(CartArr))
               alert("Product Added To Cart")
-              CartArr=JSON.parse(localStorage.getItem("cart"))||[]
+           
+              console.log(CartArr)
               sup.innerText=CartArr.length
     
              add_to_cart.innerText="Added!"
@@ -93,3 +107,5 @@ function  checkDuplicate(product){
     }
     return false
 }
+
+FetchData()
