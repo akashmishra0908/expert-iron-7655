@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="address.css">
     <title>Address</title>
 </head>
+
 <body>
 
     <div id="section1">
@@ -16,49 +18,49 @@
 
         <div id="contact">
 
-                <h3>Contact information</h3>
-
-
-                <form action="" id="form">
-
-                    <input id="email" type="email" placeholder="Email" required><br><br>
-            <input type="checkbox" id="mailme" name="mailme" >
-            <label for="mailme">Email me with news and offers</label>
+            <h3>Contact information</h3>
 
         </div>
 
-        <div id="address">
+        <form>
 
-            <h3>Shipping address</h3>
+            <input id="email" type="email" placeholder="Email" required><br><br>
+            <input type="checkbox" id="mailme" name="mailme">
+            <label for="mailme">Email me with news and offers</label>
 
-            <label for="country">Country/region : </label>
-            <select  name="country" id="country">
-                
-                <option value="India">India</option>
-                <option value="Russia">Russia</option>
-                <option value="United States of America">United States of Amrica</option>
-                <option value="Australia">Australia</option>
-                <option value="Japan">Japan</option>
-                <option value="China">China</option>
-                <option value="Afganistan">Afganistan</option>
-                <option value="Nepal">Nepal</option>
-                <option value="Shri Lanka">Shri Lanka</option>
-                <option value="Bhutan">Bhutan</option>
-                <option value="Britain">Britain</option>
-                <option value="Canada">Canada</option>
-                <option value="Denmark">Denmark</option>
-                <option value="Egypt">Egypt</option>
-                <option value="France">France</option>
-                <option value="Germany">Germany</option>
-                <option value="Hungary">Hungary</option>
-                <option value="Ireland">Ireland</option>
-                <option value="Jordon">Jordon</option>
-                <option value="Kenya">Kenya</option>
-            </select>
-            <br><br>
+
+            <div id="address">
+
+                <h3>Shipping address</h3>
+
+                <label for="country">Country/region : </label>
+                <select name="country" id="country">
+
+                    <option value="India">India</option>
+                    <option value="Russia">Russia</option>
+                    <option value="United States of America">United States of Amrica</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Japan">Japan</option>
+                    <option value="China">China</option>
+                    <option value="Afganistan">Afganistan</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Shri Lanka">Shri Lanka</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Britain">Britain</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Jordon">Jordon</option>
+                    <option value="Kenya">Kenya</option>
+                </select>
+                <br><br>
                 <input id="firstname" type="text" placeholder="First name" required>
                 <input id="lastname" type="text" placeholder="Last name" required><br><br>
-                
+
                 <input id="add" type="text" placeholder="Address" required><br><br>
 
                 <input id="apartment" type="text" placeholder="Apartment, suite etc." required><br><br>
@@ -109,31 +111,82 @@
                 <label for="save">Save this information for next time</label><br>
                 <input type="checkbox" id="textme" name="textme">
                 <label for="textme">Text me wtih news and offers</label>
-
-                <p><a href=""> Return to Cart</a></p>
-               <input id="submit" type="Submit">
-               <br><br><hr>
-
-                </form>
-
-
                 
+                <p><a href="./cart.html"> Return to Cart</a></p>
+                
+                <div class="container">
+                    <input type="submit" class="btn" value="Continue to shipping">
 
-        </div>
+                    <!-- <button id="submit" type="submit" class="btn"  >Continue to shipping</button> -->
 
-      <a href="">Refund policy </a>
-        <a href=""> Shipping policy </a>
-        <a href=""> Privacy policy </a>
-        <a href=""> Terms of service</a>
+
+                    <div class="popup" id="popup">
+                        <img src="./favicon/404-tick.png" alt="tick">
+                        <h2>Thank You!</h2>
+                        <p>Your details has been successfully submitted. Thanks!</p>
+                        <button type="button" onclick="closePopup()">Continue to payment</button>
+                    </div>
+                </div>
+                <!-- <input id="submit" type="Submit" value="Continue to shipping"> -->
+                <br><br>
+                <hr>
+
+        </form>
+
+
 
 
     </div>
-    
+
+    <a href="">Refund policy &nbsp; </a>
+    <a href=""> Shipping policy &nbsp </a>
+    <a href=""> Privacy policy &nbsp</a>
+    <a href=""> Terms of service</a>
+
+
+    </div>
+
     <div id="section2">
 
     </div>
-    
+
+
+    <script>
+
+
+const form = document.querySelector("form");
+form.addEventListener('submit', formSubmit);
+
+        function formSubmit(event) {
+
+            console.log("working");
+            event.preventDefault();
+            openPopup();
+            // window.location.reload();
+
+        }
+   
+
+
+
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup")
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup")
+            // window.location.href("./payment.html")
+            window.location.assign("./payment.html");
+        }
+
+    </script>
+
+
+
 </body>
+
 </html>
 
 
