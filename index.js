@@ -19,3 +19,7 @@
         }
     }
 })
+// window.addEventListener("click",()=>{
+//     alert("Plaese login first!")
+//     window.location.assign("signUp.html")
+// })

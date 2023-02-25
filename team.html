@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" width="450%" type="image" href="./img.png/IMG-20230223-WA0006.jpg">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #545454;
+        }
+        .conatnier{
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+            height: auto;
+            margin-top:25px;
+            display: block;
+               background-color: #f0f0f0;
+               text-align: center;
+        }
+        .conatnier-child{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            width: 100%;   
+        }
+        .conatnier-child>div{
+            padding: 20px;
+           display: flex;
+           width: 100%;
+        }
+        .conatnier h1,h5,p{
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="conatnier">
+        <div class="conatnier-child">
+            <div>
+            <div>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            <div>
+                <h1>Akash Mishra</h1>
+                <h5>Team Lead</h5>
+                <p>Aspiring FullStack Developer</p>
+            </div>
+            </div>
+            <div>
+            <div>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            <div>
+                <h1>Md.afsar</h1>
+                <h5>Team Member</h5>
+                <p>Aspiring FullStack Developer</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            <div>
+                <h1>Abhishek Rai</h1>
+                <h5>Team Member</h5>
+                <p>Aspiring FullStack Developer</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAH8AgAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBgcEBf/EADYQAAEDAwEFBQcDBAMAAAAAAAEAAgMEBREhBhIxQXEyYYGR0RMUIkJRocEHUrFTcoLhFSNj/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDXEIQgE5oSBSsCBzGqTCQJUAhefcr1b7ZpVVAEn9NnxP8AL1Vcqtuxkijocjk6V+PsPVBc0KiM26rA4b9FA4dzyF7Nr2wt9Y5sdQHUsh0G+csP+XrhBYk0hOGuo1CEED2qPmuh4ULhqgYgdodUIHaHVAIQhA5oU7BhRMCnaECqr7ZX99A0UVE/dqHjee8cWN7u8qzucGtLnHDQMkrIbjVurq+oqn8ZXlwzyHIeAwg5yS4lziSSckniShCFUCEIQWPZjaWS3PZSVr3PoycAnUxdO7uWhghwDmnIIyD9VjK0DYS4uqaCSjldl9MRuE/sPDyOfsirMVE8KZRvCggPFIO0OqV3FIO0OqASpEoQSRqYcFFGpgg8/aCYwWOukboRC4Dx0/KygcFr1zpvfLdU039WNzR1xoshILSWuGHDQj6KgQhCIEIQgFZdgZC29vZyfA7PgQq0rd+nlKXVVVWEfCxgjae86n7AeaC8pr05NcorncmjtDqnvTB2h1QCUJEqCWNTDgoI1MECrH6+V01dUyuADnzPJDdANStgHFZLeqd1Ld6yF4xiZxHQnIPkQg4kIQqgQhCAWg7ATB9nkjEYaY5yCR82QDk/x4LPlomwUJisjpCMe1nc4dBgfgoqxprk5NeoIHpg7Q6pzk0dodUAhCED2FTtK52qZhQSKr7dWptRQ/8AIRM/7oMb+PmZ/r1VoTZGMljdHIA5jwQ4HmCgxpC6LjTikuFTTNOWxSuYD3ArnVQIQhB2Wi3yXS4RUkem8cuf+1o4larSU0VHTR01O3dijG60Kq/p3Az2FZU7vxl4jB7sZ/KuCihRvKeVDIUEbuKQdodUIHaHVAIQhAqkYVElBxryQdTSlJA1K8qqvttogfb1ce8PkYd53kFVbttfLUVtO6ia+Onp5A/DuMnXuxnRB5G0FDUUN0nbVamR5ka8cHgnOQvOWrXG30d9tzBJqx7Q+KUcWZHEeizq82WstEmKhm9EThkzey70PcUHnJQCSGgEk6ADiV6Fostbd5d2kjxGDh0r9GN8efQLQbFs5RWhoe1vtqnnM8aj+0clUcmxlHPb7c6GshdDLK8ytDuYwB4HTgrAqftlf5qS409NQyYfTuEsn0LuTT3YP3VgtN0p7rRtngODwfGTqw/RRXa8qBxTnuUaAQO0OqEDtDqgFxV12oKAH3mpY1w+Qau8gqNcNoLjXFwdOYYjwji+H78SvK555oLbX7ZHVtBTEf8ApN6BV2tudbXEmqqZHg/LnDR4DRciFUHBCEINE2GrveLP7u45fTO3f8TqPTwXNtxefYQC2wFpllGZTjO63kOpXhbGVvut4EROGVDSw9RqPyPFN2wopKa8STPJdHU/Gxx8iPD+MKKsuwV0FRQOoZSPa0+rOWWH0P4VguddHb6Carl7MTc4+p5DxKoWwdO+S8una8tZBES7Hzb2gH58F3/qFXO3qagYdMe1k79SGj+UFQqJ5KmeSeZ29JI4uce8pscj4nh8T3seODmOII8QmoVR7VHtRdKbAfK2dg5SjJ8+K9ui2xpZMCrgkhP7m/E31+ypSEGpUlwpK0ZpaiOTuB18uK6R2h1WStJa4OaSCOBGhC9q27T3CicBK/3mIHsyHUdHcfPKivEQhCqBCEIBCEIHRSOhlZLGcPY4Ob1Ctm2NWyqtFvkZwmd7Qdw3eH3+yqK6Jqt8tFTUzuzTl+6e5xB9UFm/T2QCati03ixjh34J9QvG2oq/fL5VSA5Yx3s29G6fzlQ2S5OtVY6dozvRPYR3kaffC4NSck5PMoBCEIBCEIBCEIP/2Q==" alt="">
+            </div>
+            <div>
+                <h1>Ankit Kumar</h1>
+                <h5>Team Member</h5>
+                <p>Aspiring FullStack Developer</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            <div>
+                <h1>Himanshu Jain</h1>
+                <h5> Team Member</h5>
+                <p>Aspiring FullStack Developer</p>
+            </div>
+        </div>
+           
+        </div>
+
+        
+
+    </div>
+</body>
+</html>
