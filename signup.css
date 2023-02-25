@@ -168,6 +168,8 @@ p{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     justify-content: center;
 }
+
+
 @media all and (min-width:400px) and (max-width:900px) {
     .main-signup{
 display: flex;
