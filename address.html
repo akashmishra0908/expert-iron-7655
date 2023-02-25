@@ -18,9 +18,10 @@
 
                 <h3>Contact information</h3>
 
-           
 
-            <input type="email" placeholder="Email" required><br><br>
+                <form action="" id="form">
+
+                    <input id="email" type="email" placeholder="Email" required><br><br>
             <input type="checkbox" id="mailme" name="mailme" >
             <label for="mailme">Email me with news and offers</label>
 
@@ -31,7 +32,7 @@
             <h3>Shipping address</h3>
 
             <label for="country">Country/region : </label>
-            <select name="country" id="country">
+            <select  name="country" id="country">
                 
                 <option value="India">India</option>
                 <option value="Russia">Russia</option>
@@ -55,13 +56,13 @@
                 <option value="Kenya">Kenya</option>
             </select>
             <br><br>
-                <input type="text" placeholder="First name" required>
-                <input type="text" placeholder="Last name" required><br><br>
+                <input id="firstname" type="text" placeholder="First name" required>
+                <input id="lastname" type="text" placeholder="Last name" required><br><br>
                 
-                <input type="text" placeholder="Address" required><br><br>
+                <input id="add" type="text" placeholder="Address" required><br><br>
 
-                <input type="text" placeholder="Apartment, suite etc." required><br><br>
-                <input type="text" placeholder="City" required>
+                <input id="apartment" type="text" placeholder="Apartment, suite etc." required><br><br>
+                <input id="city" type="text" placeholder="City" required>
                 <select name="state" id="state">
                     <option value="Andman and Nicobar">Andman and Nicobar</option>
                     <option value="Andhra pradesh">Andhra Pradesh</option>
@@ -101,23 +102,26 @@
                     <option value="Uttrakhand">Uttrakhand</option>
                     <option value="West Bengal">West Bengal</option>
                 </select>
-                <input type="text" placeholder="PIN code" required><br><br>
-                <input type="number" placeholder="Phone" required><br><br>
+                <input id="pincode" type="text" placeholder="PIN code" required><br><br>
+                <input id="phone" type="number" placeholder="Phone" required><br><br>
 
                 <input type="checkbox" id="save" name="save">
-                <label for="save">Save this information for nest time</label><br>
+                <label for="save">Save this information for next time</label><br>
                 <input type="checkbox" id="textme" name="textme">
                 <label for="textme">Text me wtih news and offers</label>
 
                 <p><a href=""> Return to Cart</a></p>
-                <button>continue to shipping</button><br><br><hr>
+               <input id="submit" type="Submit">
+               <br><br><hr>
+
+                </form>
+
+
+                
 
         </div>
 
-        <!-- <p><a href="">Refund policy </a>   <a href=""> Shipping policy </a>  
-        <a href=""> Privacy policy </a>   <a href=""> Terms of service</a></p> -->
-
-        <a href="">Refund policy </a>
+      <a href="">Refund policy </a>
         <a href=""> Shipping policy </a>
         <a href=""> Privacy policy </a>
         <a href=""> Terms of service</a>
@@ -131,3 +135,19 @@
     
 </body>
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h1>The input required attribute</h1>
+
+<form action="/action_page.php">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <input type="submit">
+</form>
+
+</body>
+</html> -->

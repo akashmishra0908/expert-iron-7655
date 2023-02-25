@@ -1,138 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/0244637c96.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="payment.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Payment</title>
+	<link rel="stylesheet" type="text/css" href="payment.css">
 </head>
 <body>
+<header>
+	<div class="container">
+		<div class="left">
+      <img id="logo" src="./img.png/Global Bazaar (1).png"alt="logo">
+      <label for="img"><h1>Payment Gateway</h1></label><br>
+      <h2>Total items:</h2>
+			<h3>Your Payable Amount:</h3><br>
+      <h4>Discount coupon</h4><br>
+      <input id="coupon" type="text" placeholder="Enter Your Discount Coupon code"><br><br>
+      <h5>Don't want to purchase?</h5>
+      <button id="back" > Go Back</button>
+			
+		</div>
+		<div class="right">
+			<h3>PAYMENT</h3>
+			<form>
+				Accepted Card <br>
+				<img src="./favicon/card1.png" width="100">
+				<img src="./favicon/card2.png" width="50">
+				<br><br>
 
-
-    <div id="check">
-        <div id="checkout">
-        
-        </div>
-    </div>
-    <div class="popup">
-
-
-        <div class="col-75">
-            <div class="container">
-              <form>
-        
-                <!-- <div class="row">
-                  <div class="col-50">
-                    <h3>Billing Address</h3>
-                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                    <input type="text" id="email" name="email" placeholder="john@example.com">
-                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                    <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                    <label for="city"><i class="fa fa-institution"></i> City</label>
-                    <input type="text" id="city" name="city" placeholder="New York">
-        
-                    <div class="row">
-                      <div class="col-50">
-                        <label for="state">State</label>
-                        <input type="text" id="state" name="state" placeholder="NY">
-                      </div>
-                      <div class="col-50">
-                        <label for="zip">Zip</label>
-                        <input type="text" id="zip" name="zip" placeholder="10001">
-                      </div>
-                    </div>
-                  </div> -->
-        
-                  <div class="col-50">
-                    <h3>Payment</h3>
-                    <label for="fname">Accepted Cards</label>
-                    <div class="icon-container">
-                      <i class="fa fa-cc-visa" style="color:navy;"></i>
-                      <i class="fa fa-cc-amex" style="color:blue;"></i>
-                      <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                      <i class="fa fa-cc-discover" style="color:orange;"></i>
-                    </div>
-                    <label for="cname">Name on Card</label>
-                    <input type="text" id="cname" name="cardname" placeholder="Akash Mishra">
-                    <label for="ccnum">Credit card number</label>
-                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                    <label for="expmonth">Exp Month</label>
-                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
-        
-                    <div class="row">
-                      <div class="col-50">
-                        <label for="expyear">Exp Year</label>
-                        <input type="text" id="expyear" name="expyear" placeholder="2018">
-                      </div>
-                      <div class="col-50">
-                        <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" name="cvv" placeholder="352">
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
-                <label>
-                  <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-                </label>
-                <a id="sub" href="../index.html"><submit type="submit" class="confirmPay" value="Confirm" class="btn">Confirm</submit></a>
-              </form>
-            </div>
-          </div>
-
-
-    </div>
-
-
-
-<script>
-
-
-
-
-document.querySelector("#continue").addEventListener("click",function(){
-        
-        document.querySelector(".popup").classList.add("active");
-        window.location.href
-        
-    })
-
-    document.querySelector(".btn").addEventListener("click",function(){
-        document.querySelector(".popup").classList.remove("active");
-    })
-let formName=document.getElementById("fname");
-let formEmail=document.getElementById("email");
-let formAdd=document.getElementById("adr");
-let formCity=document.getElementById("city");
-let formState=document.getElementById("state")
-let formZip=document.getElementById("zip");
-let formCard=document.getElementById("cname");
-let formCC=document.getElementById("ccnum");
-let formExM=document.getElementById("expmonth");
-let formExY=document.getElementById("expyear");
-let formCvv=document.getElementById("cvv");
-let sub=document.getElementById("sub");
-
-let Btn=document.getElementsByClassName(".confirmPay");
-Btn.addEventListener("click",(e)=>{
-    e.preventDefault();
-    if(formName.value || formEmail.value || formAdd.value || formCity.value || formState.value || formZip.value || formCard.value  || formCC.value || formExM.value || formExY.value || formCvv.value){
-        alert("Please Enter Crediantial");
-    }
-    else{
-        alert("Order Confirm")
-        sub.setAttribute("href","./index.html")
-    }
-})
-
-
-
-
-</script>
-    
+        Name on the card
+			<input type="text" name="" placeholder="Enter Your Name" required>
+      Card Number
+			<input type="text" name="" placeholder="Enter card number"required>
+				
+				Exp. month
+				<input type="text" name="" placeholder="Enter Month" required>
+				<div id="zip">
+					<label>
+						Exp. year
+						<select>
+							<option>Choose Year..</option>
+							<option>2023</option>
+							<option>2024</option>
+							<option>2025</option>
+							<option>2026</option>
+						</select>
+					</label>
+						<label>
+						CVV
+						<input type="number" name="" placeholder="123" required>
+					</label>
+				</div>
+        <input type="submit" name="" value="Proceed to Checkout">
+			</form>
+			
+		</div>
+	</div>
+</header>
 </body>
 </html>

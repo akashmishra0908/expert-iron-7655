@@ -1,10 +1,46 @@
 /* body{
     background: lightgray;
 } */
-div{
-    background: #f0f0f0;
+body{
+    /* background: #f0f0f0; */
+    background: #ffffff;
+    width: 100%;
+    /* height: 100vh; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: center; */
 }
 
+#section1{
+    /* background: #ffffff; */
+    background: #f0f0f0;
+    /* text-align: center; */
+    width: 760px;
+    padding-left: 80px;
+    padding-top: 20px;
+}
+#email,#add,#apartment,#phone{
+    width: 572px;
+}
+#country{
+    width: 470px;
+}
+#firstname,#lastname{
+    width: 280px;
+}
+#city,#state,#pincode{
+    width: 182.663px;
+}
+#submit{
+    width: 150px;
+    background:#e7e7e7;
+    cursor: pointer;
+}
+#submit:hover{
+    background: lightgreen;
+
+}
 
 a{
     text-decoration: none;
