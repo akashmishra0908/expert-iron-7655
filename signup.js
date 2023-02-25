@@ -51,35 +51,44 @@ let Repassword=document.getElementById("Repassword").value;
 ////login user
      
       
-     // console.log(enteredmail,enteredpassword)
-      let login=document.getElementById("logIn")
-     login.addEventListener("click",LoginUser)
+          
+      
+document.getElementById('logIn').addEventListener('click',(e)=>{
+  e.preventDefault()
+  //console.log("sign in");
+  fetch('https://gbp-temp-api.onrender.com/comments')
+  .then((res)=>{
+    return res.json()
+  })
+  .then((data)=>{
+    console.log(data);
+    let verify= verifyUser(data);
+    if(verify){
+      alert("ok done")
     
-      async function LoginUser(event){
-        let enteredmail=document.getElementById("enteredmail").value;
-      let enteredpassword=document.getElementById("enteredpassword").value;
-        event.preventDefault()
+    }else{
+      alert('wrong cred!................')
+    }
+  })
+})
 
-        try {
-          let res=await fetch('https://gbp-temp-api.onrender.com/comments');
-          let data=await res.json()
-          console.log(data)
-          logindata(data)
-        } catch (error) {
-          console.log(error)
-        }
-      }
-    //  LoginUser()
+    
+function verifyUser(data){
+  let enteredmail=document.getElementById("enteredmail").value;
+    let enteredpassword=document.getElementById("enteredpassword").value;
 
-    function logindata(data){
-      for(let el of data){
-        if(el.Mail==enteredmail&&el.pass==enteredpassword){
-          alert("successefull login")
-        }
-        else{
-          alert("something went wrong")
-        }
+  let flag= false
+  data.forEach((element) => {
+    if(element.Mail == enteredmail){
+      if(element.Pass == enteredpassword){
+        flag=true;
       }
     }
+  })
+
+  return flag
+}
+     // console.log(enteredmail.value)
+
       
 
