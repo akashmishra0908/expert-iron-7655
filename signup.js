@@ -7,7 +7,7 @@ alrdy.addEventListener("click",function(){
 
 
 
-
+let form1=document.getElementById("signIn")
 let signup=document.getElementById("sign")
 signup.addEventListener("click",RegisterUser)
     async function RegisterUser(event){
@@ -38,6 +38,7 @@ let Repassword=document.getElementById("Repassword").value;
             }) 
             
             console.log(register_request);
+                  form1.reset()
             
         } catch (error) {
           console.log(error);
@@ -51,9 +52,9 @@ let Repassword=document.getElementById("Repassword").value;
 ////login user
      
       
-          
+       let form=document.getElementById("logIn")   
       
-document.getElementById('logIn').addEventListener('click',(e)=>{
+document.getElementById('log').addEventListener('click',(e)=>{
   e.preventDefault()
   //console.log("sign in");
   fetch('https://gbp-temp-api.onrender.com/comments')
@@ -65,9 +66,13 @@ document.getElementById('logIn').addEventListener('click',(e)=>{
     let verify= verifyUser(data);
     if(verify){
       alert("ok done")
+      form.reset()
+      localStorage.setItem('userLoggedIn', true);
+      window.location.assign("home.html")
     
     }else{
       alert('wrong cred!................')
+      form.reset()
     }
   })
 })
