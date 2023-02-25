@@ -1,6 +1,7 @@
 let Cart =JSON.parse(localStorage.getItem("cart"))||[]
 let buy=document.querySelector(".buy")
-
+let sup=document.getElementById("super")
+sup.innerText=Cart.length
 let emptyCart=document.querySelector("h3")
 let Container=document.getElementById("cart-container")
 let flex_container=document.getElementById("flex_container")
@@ -29,7 +30,7 @@ function displaydata(){
     category.textContent = product.category;
     price.textContent = "RS."+product.price;
     title.textContent = product.title;
-
+  console.log(price.textContent)
     Remove.addEventListener("click",()=>{
      Cart=Cart.filter((ele)=>{
       return ele.id!==product.id
@@ -58,6 +59,7 @@ function displaydata(){
     sum+=Cart[i].price*Cart[i].quantity
   }
 total.textContent=sum
+localStorage.setItem("price",sum)
 }
 if(Cart.length>0){
   displaydata()
@@ -68,5 +70,6 @@ else{
  buy.style.backgroundColor="white"
  buy.style
 }
+localStorage.setItem("cart-length",Cart.length)
 
 
