@@ -269,36 +269,7 @@ async function DeleteUser(index){
 
   }
     
-  let titleInp = document.getElementById("title_inp")
-  let imgurl = document.getElementById("img_url")
-  let Gen = document.getElementById("gender_inp")
-  let price = document.getElementById("price_inp")
- let sub = document.getElementById("form_btn")
 
-function submitpro(){
-	console.log(titleInp.value)
-}
 
 
   
-//   empCreateBtn.addEventListener("click", async () => {
-
-// 	const name = empNameInput.value;
-// 	const image = empImgInput.value;
-// 	const department = empSalaryInput.value;
-// 	const salary
-// 	= empNameInput.value;
-  
-//    let emObj = {
-// 	name,
-// 	image,department,salary
-//    }
-   
-// 	 await fetch(`${baseServerURL}/employees`,{
-// 	  method: 'POST',
-// 	  headers:{"Content-Type":"application/json"},
-// 	  body: JSON.stringify(emObj)
-// 	 })
-  
-// 	 fetchAndRenderEmployees()
-//   });
