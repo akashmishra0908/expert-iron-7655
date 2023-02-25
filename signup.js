@@ -8,20 +8,47 @@ alrdy.addEventListener("click", function () {
 
 
 
-let signup = document.getElementById("sign")
-signup.addEventListener("click", RegisterUser)
-async function RegisterUser(event) {
-  event.preventDefault()
-  let n = document.getElementById("name").value;
-  let mail = document.getElementById("mail").value;
-  let password = document.getElementById("password").value;
-  let Repassword = document.getElementById("Repassword").value;
-  if (password == Repassword) {
-    try {
-        const obj = {
-        Name: n,
-        Mail: mail,
-        Pass: password,
+let form1=document.getElementById("signIn")
+let signup=document.getElementById("sign")
+signup.addEventListener("click",RegisterUser)
+    async function RegisterUser(event){
+        event.preventDefault()
+ let n=document.getElementById("name").value;
+let mail=document.getElementById("mail").value;
+let password=document.getElementById("password").value;
+let Repassword=document.getElementById("Repassword").value;
+       if(password==Repassword){
+        try {
+          
+            const obj = { 
+                Name:n,
+                Mail:mail,
+                Pass:password,
+               
+         
+                 }
+
+          
+     //  console.log(obj)
+            let register_request = await fetch(`https://gbp-temp-api.onrender.com/comments`,{
+              method : 'POST',
+              headers : {
+                "Content-Type" : 'application/json'
+              },
+              body : JSON.stringify(obj)
+            }) 
+            
+            console.log(register_request);
+                  form1.reset()
+            
+        } catch (error) {
+          console.log(error);
+        }
+       }
+       else{
+        alert("Password is not same")
+       }
+
       }
       //  console.log(obj)
       let register_request = await fetch(`https://gbp-temp-api.onrender.com/comments`, {
@@ -48,32 +75,56 @@ async function RegisterUser(event) {
 
 ////login user
 
-let userObj = JSON.parse(localStorage.getItem("userdata")) || [];
-// // console.log
-//  // console.log(enteredmail,enteredpassword)
-//  let username=userObj.Mail;
-let login = document.getElementById("log")
-login.addEventListener("click", LoginUser)
-
-async function LoginUser(event) {
-  var enteredmail = document.getElementById("enteredmail").value;
-  var enteredpassword = document.getElementById("enteredpassword").value;
-  event.preventDefault()
-
-  try {
-    if (userObj.Mail == enteredmail && userObj.Pass == enteredpassword) {
-      let res = await fetch('https://gbp-temp-api.onrender.com/comments');
-      let data = await res.json()
-      console.log(data);
-      alert("login succesfully !!!!");
+     
+      
+       let form=document.getElementById("logIn")   
+      
+document.getElementById('log').addEventListener('click',(e)=>{
+  e.preventDefault()
+  //console.log("sign in");
+  fetch('https://gbp-temp-api.onrender.com/comments')
+  .then((res)=>{
+    return res.json()
+  })
+  .then((data)=>{
+    console.log(data);
+    let verify= verifyUser(data);
+    if(verify){
+      alert("ok done")
+      form.reset()
+      localStorage.setItem('userLoggedIn', true);
+      window.location.assign("home.html")
+    
+    }else{
+      alert('wrong cred!................')
+      form.reset()
     }
-    else {
-      alert("opps");
+  })
+})
+
+    
+function verifyUser(data){
+  let enteredmail=document.getElementById("enteredmail").value;
+    let enteredpassword=document.getElementById("enteredpassword").value;
+
+  let flag= false
+  data.forEach((element) => {
+    if(element.Mail == enteredmail){
+      if(element.Pass == enteredpassword){
+        flag=true;
+      }
     }
-  } catch (error) {
-    console.log(error)
-  }
+  })
+
+  return flag
 }
+     // console.log(enteredmail.value)
+
+      
+
+
+
+
 
 
 
