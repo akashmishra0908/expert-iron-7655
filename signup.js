@@ -1,9 +1,10 @@
-let alrdy=document.getElementById("already");
+let alrdy = document.getElementById("already");
 // console.log("hoi");
-alrdy.addEventListener("click",function(){
-    document.getElementById("signIn").style.display="none";
-    document.getElementById("logIn").style.display="block";
+alrdy.addEventListener("click", function () {
+  document.getElementById("signIn").style.display = "none";
+  document.getElementById("logIn").style.display = "block";
 })
+
 
 
 
@@ -47,9 +48,33 @@ let Repassword=document.getElementById("Repassword").value;
        else{
         alert("Password is not same")
        }
+
       }
+      //  console.log(obj)
+      let register_request = await fetch(`https://gbp-temp-api.onrender.com/comments`, {
+        method: 'POST',
+        headers: {
+          "Content-Type": 'application/json'
+        },
+        body: JSON.stringify(obj)
+      })
+      userObj.push(obj);
+      localStorage.setItem("userdata", JSON.stringify(userObj));
+      console.log(obj);
+      alert("Signup Succesfull !!");
+
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  else {
+    alert("Password is not same")
+  }
+}
 
 ////login user
+
      
       
        let form=document.getElementById("logIn")   
@@ -96,4 +121,12 @@ function verifyUser(data){
      // console.log(enteredmail.value)
 
       
+
+
+
+
+
+
+
+
 
