@@ -596,8 +596,9 @@ body {
 }
 
 .card__img{
-    max-width: 70%;
+    max-width: 100%;
 	margin-top: 2%;
+	border-radius: 4%;
 }
 .card-list{
 	display: grid;
@@ -605,11 +606,35 @@ body {
 	gap: 20px;
 }
 
+
+
+@media all and (min-width:100px) and (max-width:399px){
+	.card-list{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media all and (min-width:400px) and (max-width:900px){
+	.card-list{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+
+
 .card{
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	border-radius: 4%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	text-align: center;
 	background-color: white;
+}
+.card button{
+	background-color: #342E37;
+	color: white;
+	padding: 5px;
+	margin-bottom: 5px;
 }
 /* y */
