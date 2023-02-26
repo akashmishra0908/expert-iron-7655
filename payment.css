@@ -165,7 +165,8 @@ input[type="submit"]:hover{
 }
 .popup{
     width: 400px;
-    background: #fff;
+    /* background: #fff; */
+    background: #f0f0f0;
     border-radius: 6px;
     position: absolute;
     top: 0;
