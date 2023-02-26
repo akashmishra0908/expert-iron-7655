@@ -16,9 +16,9 @@
 				<label for="img">
 					<h1>Payment Gateway</h1>
 				</label><br />
-				<h2>Total items: 0</h2>
+				<h2 id="totalitem"></h2>
 				<h3>Your Payable Amount:</h3>
-				<h3>&#8377 0</h3>
+				<h3 id="Tprice"></h3>
 				<br />
 				<h4>Discount coupon</h4>
 				<br />
@@ -78,6 +78,15 @@
 	</header>
 
 	<script>
+ let price = localStorage.getItem("price")
+ let cartLegth = localStorage.getItem("cart-length")
+ let Tprice = document.getElementById("Tprice")
+ console.log(price,cartLegth)
+ let item =document.getElementById("totalitem")
+ item.innerHTML = `Total items: ${cartLegth}`
+ Tprice.innerHTML = `&#8377 ${price}`
+
+ 
 
 
 const form = document.querySelector("form");

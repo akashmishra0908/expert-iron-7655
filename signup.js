@@ -1,13 +1,11 @@
-let alrdy = document.getElementById("already");
+
+
+let alrdy=document.getElementById("already");
 // console.log("hoi");
-alrdy.addEventListener("click", function () {
-  document.getElementById("signIn").style.display = "none";
-  document.getElementById("logIn").style.display = "block";
+alrdy.addEventListener("click",function(){
+    document.getElementById("signIn").style.display="none";
+    document.getElementById("logIn").style.display="block";
 })
-
-
-
-
 let form1=document.getElementById("signIn")
 let signup=document.getElementById("sign")
 signup.addEventListener("click",RegisterUser)
@@ -19,16 +17,11 @@ let password=document.getElementById("password").value;
 let Repassword=document.getElementById("Repassword").value;
        if(password==Repassword){
         try {
-          
-            const obj = { 
+            const obj = {
                 Name:n,
                 Mail:mail,
                 Pass:password,
-               
-         
                  }
-
-          
      //  console.log(obj)
             let register_request = await fetch(`https://gbp-temp-api.onrender.com/comments`,{
               method : 'POST',
@@ -36,11 +29,10 @@ let Repassword=document.getElementById("Repassword").value;
                 "Content-Type" : 'application/json'
               },
               body : JSON.stringify(obj)
-            }) 
-            
+            })
+            alert(`Welcome ${obj.Name}`)
             console.log(register_request);
                   form1.reset()
-            
         } catch (error) {
           console.log(error);
         }
@@ -48,37 +40,9 @@ let Repassword=document.getElementById("Repassword").value;
        else{
         alert("Password is not same")
        }
-
       }
-      //  console.log(obj)
-      let register_request = await fetch(`https://gbp-temp-api.onrender.com/comments`, {
-        method: 'POST',
-        headers: {
-          "Content-Type": 'application/json'
-        },
-        body: JSON.stringify(obj)
-      })
-      userObj.push(obj);
-      localStorage.setItem("userdata", JSON.stringify(userObj));
-      console.log(obj);
-      alert("Signup Succesfull !!");
-
-
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  else {
-    alert("Password is not same")
-  }
-}
-
 ////login user
-
-     
-      
-       let form=document.getElementById("logIn")   
-      
+       let form=document.getElementById("logIn")
 document.getElementById('log').addEventListener('click',(e)=>{
   e.preventDefault()
   //console.log("sign in");
@@ -90,23 +54,19 @@ document.getElementById('log').addEventListener('click',(e)=>{
     console.log(data);
     let verify= verifyUser(data);
     if(verify){
-      alert("ok done")
+      alert("Login successfull")
       form.reset()
       localStorage.setItem('userLoggedIn', true);
       window.location.assign("home.html")
-    
     }else{
       alert('wrong cred!................')
       form.reset()
     }
   })
 })
-
-    
 function verifyUser(data){
   let enteredmail=document.getElementById("enteredmail").value;
     let enteredpassword=document.getElementById("enteredpassword").value;
-
   let flag= false
   data.forEach((element) => {
     if(element.Mail == enteredmail){
@@ -115,12 +75,11 @@ function verifyUser(data){
       }
     }
   })
-
   return flag
 }
-     // console.log(enteredmail.value)
 
-      
+
+
 
 
 
