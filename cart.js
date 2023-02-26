@@ -73,10 +73,12 @@ else{
  buy.style
 }
 
-let check=localStorage.getItem("UserloggedIn")
+let check=localStorage.getItem("userLoggedIn")
+// console.log(check)
 buy.addEventListener("click",()=>{
-  if(check!=null){
-    window.location.assign("./adress.html");
+  if(check=="true"){
+    window.location.assign("./address.html");
+
 }
 else{
   alert("Login to continue..")
