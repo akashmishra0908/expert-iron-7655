@@ -57,7 +57,7 @@ document.getElementById('log').addEventListener('click',(e)=>{
       alert("Login successfull")
       form.reset()
       localStorage.setItem('userLoggedIn', true);
-      window.location.assign("home.html")
+      window.location.assign("cart.html")
     }else{
       alert('wrong cred!................')
       form.reset()
