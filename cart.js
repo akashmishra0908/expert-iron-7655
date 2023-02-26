@@ -30,7 +30,7 @@ function displaydata(){
     category.textContent = product.category;
     price.textContent = "RS."+product.price;
     title.textContent = product.title;
-  console.log(price.textContent)
+    console.log(price.textContent)
     Remove.addEventListener("click",()=>{
      Cart=Cart.filter((ele)=>{
       return ele.id!==product.id
@@ -60,6 +60,8 @@ function displaydata(){
   }
 total.textContent=sum
 localStorage.setItem("price",sum)
+localStorage.setItem("cart-length",Cart.length)
+
 }
 if(Cart.length>0){
   displaydata()
@@ -70,6 +72,17 @@ else{
  buy.style.backgroundColor="white"
  buy.style
 }
-localStorage.setItem("cart-length",Cart.length)
+
+let check=localStorage.getItem("UserloggedIn")
+buy.addEventListener("click",()=>{
+  if(check!=null){
+    window.location.assign("./adress.html");
+}
+else{
+  alert("Login to continue..")
+  window.location.assign("./signup.html");
+}
+})
+
 
 

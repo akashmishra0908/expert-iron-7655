@@ -4,8 +4,16 @@ let Container=document.getElementById("product-container")
 
 let sup=document.getElementById("super")
 
-console.log(CartArr)
 
+// catching page buton 
+let first=document.getElementById("first")
+let second=document.getElementById("second")
+let third=document.getElementById("third")
+let fourth=document.getElementById("fourth")
+let next=document.getElementById("next")
+// let prev=document.getElementById("prev")
+
+// fetching data starts
 async function FetchData(){
     try{
       let res=await fetch("https://gbp-temp-api.onrender.com/product?_limit=16&_page=1")
@@ -17,14 +25,12 @@ async function FetchData(){
     }
 }
 
-
+// fetching data ends
 
 
 // sorting started here
 
 let sortBtn=document.getElementById("filter")
-// let sort_high=document.getElementById("high_to_low")
-// let sort_low=document.getElementById("low_to_high")
 
 
 
@@ -58,15 +64,12 @@ console.log(sortedData)
 
 })
 
-
 // sorting ended
-
-
 
 
 // function to display products
 function DisplayProduct(data){
-
+ 
   Container.innerHTML=""
     data.forEach((product)=>{
         let card=document.createElement("div")
@@ -82,17 +85,16 @@ function DisplayProduct(data){
           price.textContent=`₹${product.price}`;
           title.textContent=product.title
           sup.innerText=CartArr.length
-
         add_to_cart.addEventListener("click",()=>{
             if(checkDuplicate(product)){
               alert("Product Already in Cart")
-            }else{
-        
-              
+              // add_to_cart.innerText="Added!"
+            }
+            else{
               CartArr.push({...product,quantity:1})
               localStorage.setItem("cart",JSON.stringify(CartArr))
               alert("Product Added To Cart")
-           
+            
               console.log(CartArr)
               sup.innerText=CartArr.length
     
@@ -104,6 +106,9 @@ function DisplayProduct(data){
     })
 }
 
+
+
+
 //    function to check duplicates
 function  checkDuplicate(product){
     for(let i=0;i<CartArr.length;i++){
@@ -113,5 +118,94 @@ function  checkDuplicate(product){
     }
     return false
 }
+
+
+// adding event listner in buttons  for pagination
+first.addEventListener("click",()=>{
+  async function FetchData(){
+    try{
+      let res=await fetch("https://gbp-temp-api.onrender.com/product?_limit=16&_page=1")
+           res=await res.json()
+          console.log(res)
+          DisplayProduct(res)
+    }catch(err){
+      console.log(err)
+    }
+}
+FetchData()
+})
+second.addEventListener("click",()=>{
+  async function FetchData(){
+    try{
+      let res=await fetch("https://gbp-temp-api.onrender.com/product?_limit=16&_page=2")
+           res=await res.json()
+          console.log(res)
+          DisplayProduct(res)
+    }catch(err){
+      console.log(err)
+    }
+}
+FetchData()
+})
+third.addEventListener("click",()=>{
+  async function FetchData(){
+    try{
+      let res=await fetch("https://gbp-temp-api.onrender.com/product?_limit=16&_page=3")
+           res=await res.json()
+          console.log(res)
+          DisplayProduct(res)
+    }catch(err){
+      console.log(err)
+    }
+}
+FetchData()
+})
+fourth.addEventListener("click",()=>{
+  async function FetchData(){
+    try{
+      let res=await fetch("https://gbp-temp-api.onrender.com/product?_limit=16&_page=4")
+           res=await res.json()
+          console.log(res)
+          DisplayProduct(res)
+    }catch(err){
+      console.log(err)
+    }
+}
+FetchData()
+// fourth.style.backgroundColor="teal"
+})
+let i=1
+next.addEventListener("click",()=>{
+//  for(let i=0;i<5;i++){
+  i++
+    async function FetchData(){
+    try{
+      let res=await fetch(`https://gbp-temp-api.onrender.com/product?_limit=16&_page=${i}`)
+           res=await res.json()
+          console.log(res)
+          DisplayProduct(res)
+    }catch(err){
+      console.log(err)
+    }
+}
+FetchData()
+
+//  }
+    i<5
+    if(i>=4){
+             i=1
+           }
+
+})
+
+
+
+
+// pagenation ending here
+
+
+
+
+
 
 FetchData()

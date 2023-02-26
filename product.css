@@ -126,21 +126,24 @@
         #product-container{
           padding-top: 2%;
           padding-bottom: 2%;
-          width: 99%;
+          width: 89%;
         
           display: grid;
-          grid-template-columns:20% 20% 20% 20%;
+          /* grid-template-columns:20% 20% 20% 20%; */
+          grid-template-columns: repeat(4,1fr);
           grid-gap: 25px;
           justify-content: center;
           /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+          margin: auto;
         }
       
         #product-container>div>img{
-          height: 200px;
+          height: 290px;
           width: 100%;
         }
 
         .cards{
+          width: 85%;
             text-align: center;
             background-color: #FFFFFF;
             box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -236,12 +239,12 @@ padding: 2px;
       
      }
      #super{
-      color: rgb(173, 103, 103);
+      color: red;
       font-size: x-large;
     font-weight:bolder ;
       position: absolute;
-      top: 21px;
-      left: 20px;
+      top: 15px;
+      left: 22px;
      }
       
      @media all and (min-width:650px) and (max-width:900px){
@@ -304,6 +307,14 @@ padding: 2px;
     #hide{
       display: none;
     }
+    #super{
+      color: red;
+      font-size: x-large;
+    font-weight:bolder ;
+      position: absolute;
+      top: 10px;
+      left: 22px;
+     }
 
      }
 
@@ -367,12 +378,86 @@ padding: 2px;
     #hide{
       display: none;
     }
+    #super{
+      color: red;
+      font-size: x-large;
+    font-weight:bolder ;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+     }
      } 
 
 
+/* css for page-button */
+#page-btn{
+width: 50%;
+  text-align: center;
+  text-align: none;
+  margin: auto;
 
-
-    
+}
+#first{
+  width: 30px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: larger;
+  padding: 5px,10px;
+  background-color: #a5874f;
+  color: #ffffff;
+gap: 0;
+}
+#second{
+  width: 30px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: larger;
+  padding: 5px,10px;
+  background-color: #a5874f;
+  color: #ffffff;
+  margin: none;
+}
+#third{
+  width: 30px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: larger;
+  padding: 5px,10px;
+  background-color: #a5874f;
+  color: #ffffff;
+  margin: none;
+}
+#fourth{
+  width: 30px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: larger;
+  padding: 5px,10px;
+  background-color: #a5874f;
+  color: #ffffff;
+  margin: none;
+}
+  #next{
+    border: none;
+    border-radius: 5px;
+    background-color: #a5874f;
+    color: #ffffff;
+    font-weight: bold;
+  font-size: larger;
+  }
+  #prev{
+    border: none;
+    border-radius: 5px;
+    background-color: #a5874f;
+    color: #ffffff;
+    font-weight: bold;
+  font-size: larger;
+  }
+     
      
      
    
