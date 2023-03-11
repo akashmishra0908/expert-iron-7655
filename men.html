@@ -1,154 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Men</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
     <link rel="stylesheet" href="men.css">
+   <!-- Imported link properties -->
+   <link rel="icon" width="450%" type="image" href="./img.png/IMG-20230223-WA0006.jpg">
+   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+   <title>Global Bazar</title>
+   <script src="https://kit.fontawesome.com/7f6c87e9ee.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+       
+       <!-- carousel -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+   <!-- imported ended -->
+    
+  </head>
 
-</head>
-<body>
+  <body>
     <div class="nav">
         <div>
             <p class="spantag"> Pay Online and save Rs.99 on COD.</p>
         </div>
         <div>
             <div>
-                <a href="https://www.instagram.com/botnia.in/"><i style="margin-top: 22px;"
-                        class="fa-brands fa-instagram" id="icon"></i></a>
+                <a href="https://www.instagram.com/botnia.in/"><i
+                        class="fa-brands fa-instagram icon aria-colspan"></i></a>
 
             </div>
-            <div>
-                <a href=""> <img src="./img.png/IMG-20230223-WA0006.jpg" alt=""></a>
+            <div id="img">
+                <a href="./home.html"><img src="./img.png/IMG-20230223-WA0006.jpg" alt=""></a>
             </div>
 
             <div></div>
-            <div>
-                <a href="" id="icon"><i class="fa-solid fa-cart-arrow-down" id="icon"></i></a>
+            <div >
+                <a id="total_cart_item" href="./cart.html">
+                    <i class="fa-solid fa-cart-arrow-down icon"></i>
+                    <sup id="super"  >0</sup>
+                </a>
 
 
-                <a href="./signup.html" id="icon"><i class="fa-sharp fa-solid fa-right-to-bracket" id="icon"></i></a>
+                <a href="./signup.html"><i class="fa-sharp fa-solid fa-right-to-bracket icon"></i></a>
+                <span id="span"></span>
             </div>
 
         </div>
         <div>
-            <div>
-                <a href="">Printed Tees</a>
-                <a href="">Sweatshirt</a>
-                <a href="">Oversized Hoodie</a>
-                <a href="">Oversized Tees</a>
-                <a href="">Printed Crop Tops</a>
-                <a href="">Jogger</a>
+            <div id="hide">
+                <a href="./product.html">Printed Tees</a>
+                <a href="./product.html">Sweatshirt</a>
+                <a href="./product.html">Oversized Hoodie</a>
+                <a href="./product.html">Oversized Tees</a>
+                <a href="./product.html">Printed Crop Tops</a>
+                <a href="./product.html">Jogger</a>
             </div>
             <div>
-                <a href="">Men</a>
-                <a href="">Women</a>
+                <a href="./men.html">Men</a>
+                <a href="./women.html">Women</a>
+                <a href="./product.html" >All Items</a>
             </div>
         </div>
     </div>
-
-    <div id="heding">
-        <h1 >Primo Tee- Half Sleeve</h1>
-
-    </div>
+        <select id="filter">
+             <option >SORT</s></option>
+             <option value="HTL" id="high_to_low">High TO LOW</option>
+             <option value="LTH" id="low_to_high">LOW TO HIGH</option>
+           </select>
+      <div>
+    <!-- nav bar to change according to instruction -->
+    
+    
+    <!-- <select id="filter">
+      <option value="">Filter</option>
+ 
+      <option value="Men">Men</option>
+      <option value="Women">Women</option>
+    </select> -->
     <div id="product-container">
-        <!-- Here Appending All the Products  -->
+      <!-- Here Appending All the Products  -->
+    </div>
+
+<!-- button for pagenation -->
+<!-- <div id="page-btn">
+  
+    <button id="first">1</button>
+    <button id="second">2</button>
+    <button id="third">3</button>
+    <button id="fourth">4</button>
+    <button id="next">>>></button>
+
+</div> -->
+<!-- button for pagenation ENDS-->
+
+
+    <!-- footer start here -->
+
+    <footer class="foot">
+
+      <div>
+          <div class="heading">
+              <h1>About Us</h1><br>
+          </div>
+          <div class="line"></div>
+          <div class="cont">
+              <br>
+              <p>We at Botnia strive to provide the best quality clothing and service at amazing prices with free and
+                  express shipping and a delightful after sales service. Read more.</p>
+          </div>
       </div>
-    <hr>
-      <footer class="foot">
+      <div>
+          <div class="heading">
+              <h1>Quick Links</h1><br>
+          </div>
+          <div class="line"></div>
+          <br>
+          <div class="cont">
+              <a href="#" class="for_foot">
+                  <p>Track My Order</p><br>
+              </a>
 
-        <div>
-            <div class="heading">
-                <h1>About Us</h1><br>
-            </div>
-            <div class="line"></div>
-            <div class="cont">
-                <br>
-                <p>We at Botnia strive to provide the best quality clothing and service at amazing prices with free and
-                    express shipping and a delightful after sales service. Read more.</p>
-            </div>
-        </div>
-        <div>
-            <div class="heading">
-                <h1>Quick Links</h1><br>
-            </div>
-            <div class="line"></div>
-            <br>
-            <div class="cont">
-                <a href="#" class="for_foot">
-                    <p>Track My Order</p><br>
-                </a>
-
-                <a href="#" class="for_foot">
-                    <p>Refund Policy</p><br>
-                </a>
+              <a href="#" class="for_foot">
+                  <p>Refund Policy</p><br>
+              </a>
 
 
-                <a href="#" class="for_foot">
-                    <p>Shipping Policy</p><br>
-                </a>
+              <a href="#" class="for_foot">
+                  <p>Shipping Policy</p><br>
+              </a>
 
-                <a href="#" class="for_foot">
-                    <p>Privacy Policy</p><br>
-                </a>
+              <a href="#" class="for_foot">
+                  <p>Privacy Policy</p><br>
+              </a>
 
-                <a href="#" class="for_foot">
-                    <p>Terms Of Service</p><br>
-                </a>
-            </div>
-        </div>
-        <div>
-            <div class="heading">
-                <h1>Customer Support</h1><br>
-            </div>
-            <div class="line"></div>
-            <br>
-            <div class="cont">
-                <a href="#" class="for_foot">
-                    <p>Request A Return/Exchange</p><br>
-                </a>
-
-
-                <a href="#" class="for_foot">
-                    <p>Contact Us</p><br>
-                </a>
+              <a href="#" class="for_foot">
+                  <p>Terms Of Service</p><br>
+              </a>
+          </div>
+      </div>
+      <div>
+          <div class="heading">
+              <h1>Customer Support</h1><br>
+          </div>
+          <div class="line"></div>
+          <br>
+          <div class="cont">
+              <a href="#" class="for_foot">
+                  <p>Request A Return/Exchange</p><br>
+              </a>
 
 
-                <a href="#" class="for_foot">
-                    <p>Sizing Chart</p><br>
-                </a>
+              <a href="#" class="for_foot">
+                  <p>Contact Us</p><br>
+              </a>
 
 
-                <a href="#" class="for_foot">
-                    <p>About Us</p><br>
-                </a>
+              <a href="#" class="for_foot">
+                  <p>Sizing Chart</p><br>
+              </a>
 
 
-                <a href="#" class="for_foot">
-                    <p>Blog</p><br>
-                </a>
-            </div>
-        </div>
-        <div>
-            <div class="heading">
-                <h1>Customer Support</h1><br>
-            </div>
-            <div class="line"></div>
-            <div class="cont">
-                <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p><br>
-                <div class="int"><input type="text" name="" id="join">
-                    <div>
-                        <button class="foot_btn">JOIN</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div><a href="#" class="for_foot">
-                <p>© BOTNIA 2023</p>
-            </a></div>
+              <a href="#" class="for_foot">
+                  <p>About Us</p><br>
+              </a>
 
-    </footer>
-</body>
+
+              <a href="#" class="for_foot">
+                  <p>Blog</p><br>
+              </a>
+          </div>
+      </div>
+      <div>
+          <div class="heading">
+              <h1>Customer Support</h1><br>
+          </div>
+          <div class="line"></div>
+          <div class="cont">
+              <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p><br>
+              <div class="int"><input type="text" name="" id="join">
+                  <div>
+                      <button class="foot_btn">JOIN</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div><a href="#" class="for_foot">
+              <p>© BOTNIA 2023</p>
+          </a></div>
+
+  </footer>
+
+
+
+  <!-- footer ends here -->
+  </body>
+  <script src="men.js"></script>
 </html>
-<script src="/men.js"></script>

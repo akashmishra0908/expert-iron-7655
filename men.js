@@ -9,12 +9,14 @@ async function FetchData(){
     }
 }
 FetchData()
+let sortdata=[]
 function displaydata(data){
 let Men=data.filter((ele,ind)=>{
     if(ele.catogory=="men"){
       return ele
     }
   })
+  sortdata=[...Men]
   DisplayProduct(Men)
 }
 
@@ -62,3 +64,31 @@ function  checkDuplicate(product){
     }
     return false
 }
+
+
+
+let sortBtn=document.getElementById("filter")
+sortBtn.addEventListener("click",()=>{
+    let selected=document.querySelector("select").value;
+     console.log(selected)
+    if(selected=="HTL"){
+        sortdata.sort((a,b)=>b.price-a.price)
+    }
+   if(selected=="LTH"){
+     
+    sortdata.sort((a,b)=>a.price-b.price)
+
+   }
+   console.log(sortdata)
+   DisplayProduct(sortdata)
+})
+let span=document.getElementById("span");
+let res=localStorage.getItem("user");
+span.innerText=res;
+span.addEventListener("click",function(){
+    localStorage.removeItem("user");
+    localStorage.removeItem("userLoggedIn")
+    window.location.reload();
+    alert("Logout succesfully!!!!")
+    localStorage.removeItem("cart")
+})

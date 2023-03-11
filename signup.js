@@ -42,6 +42,7 @@ let Repassword=document.getElementById("Repassword").value;
        }
       }
 ////login user
+
        let form=document.getElementById("logIn")
 document.getElementById('log').addEventListener('click',(e)=>{
   e.preventDefault()
@@ -72,6 +73,7 @@ function verifyUser(data){
     if(element.Mail == enteredmail){
       if(element.Pass == enteredpassword){
         flag=true;
+        localStorage.setItem('user',element.Name);
       }
     }
   })

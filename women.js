@@ -2,21 +2,28 @@ async function FetchData(){
     try{
       let res=await fetch("https://gbp-temp-api.onrender.com/product")
            res=await res.json()
-          console.log(res)
+        //  console.log(res)
          displaydata(res)
     }catch(err){
       console.log(err)
     }
 }
+
 FetchData()
+
+let sortdata=[]
 function displaydata(data){
 let Women=data.filter((ele,ind)=>{
     if(ele.catogory=="women"){
       return ele
     }
   })
+  //console.log(Women)
+  sortdata=[...Women]
+ // console.log(sort)
   DisplayProduct(Women)
 }
+
 
 let CartArr=JSON.parse(localStorage.getItem("cart"))||[]
 let Container=document.getElementById("product-container")
@@ -62,3 +69,32 @@ function  checkDuplicate(product){
     }
     return false
 }
+
+let sortBtn=document.getElementById("filter")
+sortBtn.addEventListener("click",()=>{
+    let selected=document.querySelector("select").value;
+     console.log(selected)
+    if(selected=="HTL"){
+        sortdata.sort((a,b)=>b.price-a.price)
+    }
+   if(selected=="LTH"){
+     
+    sortdata.sort((a,b)=>a.price-b.price)
+
+   }
+   console.log(sortdata)
+   DisplayProduct(sortdata)
+})
+
+  
+
+let span=document.getElementById("span");
+let res=localStorage.getItem("user");
+span.innerText=res;
+span.addEventListener("click",function(){
+    localStorage.removeItem("user");
+    localStorage.removeItem("userLoggedIn")
+    window.location.reload();
+    alert("Logout succesfully!!!!")
+    localStorage.removeItem("cart")
+})

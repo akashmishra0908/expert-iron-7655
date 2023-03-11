@@ -200,7 +200,16 @@ FetchData()
 
 
 
-
+let span=document.getElementById("span");
+let res=localStorage.getItem("user");
+span.innerText=res;
+span.addEventListener("click",function(){
+    localStorage.removeItem("user");
+    localStorage.removeItem("userLoggedIn")
+    window.location.reload();
+    alert("Logout succesfully!!!!")
+    localStorage.removeItem("cart")
+})
 // pagenation ending here
 
 

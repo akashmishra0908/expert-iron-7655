@@ -4,7 +4,14 @@
   /* background-color: #545454; /* background-color: #545454; */
   /* background-color: whitesmoke; */
 }
-
+#span{
+  padding-top: 23px;
+  /* font-weight: 30px; */
+}
+#span:hover{
+  cursor: pointer;
+  color: rgb(219, 188, 17);
+}
 .nav {
   height: auto;
   /* position: sticky;
